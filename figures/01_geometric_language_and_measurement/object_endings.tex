@@ -1,0 +1,23 @@
+\documentclass[tikz,border=7pt]{standalone}
+% flashcards-title: Three straight geometric drawings with different endings
+% flashcards-desc: Panel I has arrowheads at both ends, panel II has two solid endpoints, and panel III has one solid endpoint and one arrowhead.
+\input{figures/tikz-style.tex}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \foreach \y/\roman in {2.2/I,0/II,-2.2/III}{
+    \node[geom panel,minimum width=8.4cm,minimum height=1.55cm] at (0,\y) {};
+    \node[geom label] at (-3.65,\y) {\roman};
+  }
+  \draw[geom both] (-2.4,2.2)--(2.8,2.2);
+  \node[geom point,label={[geom small]below:$A$}] at (-1.2,2.2) {};
+  \node[geom point,label={[geom small]below:$B$}] at (1.4,2.2) {};
+
+  \draw[geom line] (-2.4,0)--(2.8,0);
+  \node[geom point,label={[geom small]below:$C$}] at (-2.4,0) {};
+  \node[geom point,label={[geom small]below:$D$}] at (2.8,0) {};
+
+  \draw[geom ray] (-2.4,-2.2)--(2.8,-2.2);
+  \node[geom point,label={[geom small]below:$E$}] at (-2.4,-2.2) {};
+  \node[geom point,label={[geom small]below:$F$}] at (0.7,-2.2) {};
+\end{tikzpicture}
+\end{document}

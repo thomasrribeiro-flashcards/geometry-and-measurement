@@ -1,0 +1,22 @@
+\usetikzlibrary{angles,arrows.meta,calc,decorations.pathreplacing,patterns,quotes}
+
+\definecolor{geomNavy}{HTML}{17324D}
+\definecolor{geomBlue}{HTML}{2B6CB0}
+\definecolor{geomGold}{HTML}{9A6700}
+\definecolor{geomPale}{HTML}{EAF2F8}
+\definecolor{geomGray}{HTML}{5C6773}
+\definecolor{geomRed}{HTML}{B42318}
+
+\tikzset{
+  geom line/.style={draw=geomNavy,line width=1.25pt},
+  geom ray/.style={draw=geomNavy,line width=1.25pt,-{Stealth[length=3.2mm,width=2.2mm]}},
+  geom both/.style={draw=geomNavy,line width=1.25pt,{Stealth[length=3.2mm,width=2.2mm]}-{Stealth[length=3.2mm,width=2.2mm]}},
+  geom guide/.style={draw=geomGray,densely dashed,line width=0.85pt},
+  geom construction/.style={draw=geomBlue,line width=1pt},
+  geom point/.style={circle,fill=geomNavy,inner sep=1.8pt},
+  geom open point/.style={circle,draw=geomNavy,fill=white,line width=1pt,inner sep=2.1pt},
+  geom label/.style={font=\sffamily\bfseries,text=geomNavy},
+  geom small/.style={font=\sffamily\small,text=geomNavy},
+  geom tiny/.style={font=\sffamily\scriptsize,text=geomNavy},
+  geom panel/.style={rounded corners=2mm,draw=geomGray!55,fill=geomPale!40,line width=0.7pt},
+}

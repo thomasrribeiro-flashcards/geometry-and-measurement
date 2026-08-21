@@ -1,0 +1,22 @@
+\documentclass[tikz,border=7pt]{standalone}
+% flashcards-title: Not-to-scale segment diagram
+% flashcards-desc: A visually longer segment is labeled 4 centimeters with one tick, while a visually shorter segment is labeled 6 centimeters with two ticks.
+\input{figures/tikz-style.tex}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \node[geom panel,minimum width=8.8cm,minimum height=4.9cm] at (0,0) {};
+  \node[geom label] at (0,1.85) {diagram not drawn to scale};
+  \draw[geom line] (-3.4,0.85)--(2.9,0.85);
+  \node[geom point] at (-3.4,0.85) {};
+  \node[geom point] at (2.9,0.85) {};
+  \node[geom small,fill=white,inner sep=2pt] at (0.55,0.85) {$4\ \mathrm{cm}$};
+  \draw[geom line] (-2.0,-0.55)--(1.6,-0.55);
+  \node[geom point] at (-2.0,-0.55) {};
+  \node[geom point] at (1.6,-0.55) {};
+  \node[geom small,fill=white,inner sep=2pt] at (0.55,-0.55) {$6\ \mathrm{cm}$};
+  \draw[geom line,line width=1.2pt] (-0.95,1.04)--(-0.65,0.66);
+  \draw[geom line,line width=1.2pt] (-1.05,-0.36)--(-0.75,-0.74);
+  \draw[geom line,line width=1.2pt] (-0.72,-0.36)--(-0.42,-0.74);
+  \node[geom small,align=center] at (0,-1.65) {stated values and distinct tick groups override appearance};
+\end{tikzpicture}
+\end{document}

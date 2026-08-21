@@ -110,6 +110,95 @@ Card-form diversity is not a goal by itself. Zero clozes can be correct. A
 visually rich chapter may require several figures because diagrams, graphs,
 before/after states, and spatial constructions serve different retrieval roles.
 
+### Pilot chapter 1 detailed design ledger
+
+This ledger freezes the chapter-1 design before card authoring. The resolved
+inbound frontier is limited to the validator-declared arithmetic, measurement,
+unit, precision, reasonableness, variable, expression, equation, substitution,
+and verbal-expression capabilities. No geometry term or drawing convention is
+inbound.
+
+| Retrieval sequence | Target and card form | Supported-to-independent progression | Authentic representation or figure decision |
+|---|---|---|---|
+| 1–5 | Interpret a point as an ideal location; distinguish line, segment, and ray from endpoints and continuation marks (`Q/A`). | Minimal bridge on each front → identify one object from the visual grammar → mixed three-object discrimination. | **Include `object_endings`:** the presence of endpoints and one/two continuation arrows is itself the retrieval evidence. |
+| 6–10 | Translate line/segment/ray notation; use ray letter order; interpret a plane patch; recognize collinear points and an intersection (`Q/A`). | Explained notation → one-symbol translation → direction contrast → spatial reading needed by construction diagrams. | **Include `plane_patch`:** a bounded slanted patch must be read as a conventional picture of an unbounded flat surface. **Omit a separate notation table figure:** KaTeX is clearer and accessible. |
+| 11–17 | Interpret an angle as two rays with a common endpoint; locate its vertex and sides; name it with the vertex letter in the middle; distinguish angle from angle measure; use degrees; classify measured angles (`Q/A`). | Anatomy bridge → supported naming → notation contrast → exact boundary and interval classifications. | **Include `angle_anatomy` and `angle_classes`:** vertex position and amount of turn are spatial targets. Defer adjacent, vertical, complementary, supplementary, and parallel-line relationships to chapter 2. |
+| 18–21 | Align a protractor, select the scale beginning at the chosen zero, and read a degree measure; compute a segment length from two ruler readings (`Q/A`, then two `P/S`). | Analyzed alignment → independent protractor read → independent endpoint subtraction on an offset ruler. | **Include `protractor_measure` and `offset_ruler`:** both are authentic instrument-scale translations. **Omit photographs:** they add visual noise and introduce licensing overhead without improving the decision. |
+| 22–26 | Distinguish measured approximation from exact stated information; interpret equal-length ticks, equal-angle arcs, and a square-corner mark; let stated marks and values override apparent scale (`Q/A`). | Explain each mark separately → retrieve its claim → diagnose a deliberately misleading sketch. | **Include `diagram_evidence`:** conflicting visual size and explicit marks make the drawing-versus-claim distinction retrievable. |
+| 27–29 | Choose among ruler, unmarked straightedge, compass, and protractor; explain that a compass transfers a fixed distance without reporting a number (`Q/A`). | Tool-role explanations → mixed tool choice. | **Omit tool icons:** the target is the operation each tool supports, not object recognition. |
+| 30–31 | Read and complete a segment-copy construction (`Q/A`, then `P/S`). | Analyzed compass transfer → completion problem that chooses and executes the next construction step. | **Include `copy_segment_steps`:** the unchanged compass opening and target ray must be inspected. |
+| 32–34 | Define a midpoint and interpret/complete a compass-and-straightedge midpoint construction (`Q/A`, `Q/A`, then `P/S`). | Definition → analyzed equal-distance marks → independent construction plan and check. | **Include `midpoint_construction`:** crossing equal-distance marks explain why the constructed point is halfway. Do not name the resulting line as perpendicular; that term belongs to chapter 2. |
+
+Planned inventory: **30 `Q/A`, 0 cloze, 4 `P/S`, 9 figures**. The four
+problems progress from instrument reading (ruler and protractor), through a
+construction completion, to an independent midpoint construction. Every
+problem retains the complete ordered IDENTIFY → PLAN → EXECUTE → EVALUATE
+sequence. Exact drawing and longer construction practice remain outside SRS.
+
+Plausible opportunities intentionally omitted: decorative photographs; a
+symbol table rendered as an image; pictures of tools; parallel-line and
+perpendicular-line constructions, whose vocabulary is established in chapter
+2; copied-angle and bisected-angle procedures, which would lengthen this pilot
+without adding a new tool grammar; coordinate grids, transformations, circles,
+polygons, and formal proofs, all of which lie beyond the chapter frontier.
+
+### Pilot chapter 1 concept-dependency ledger (pre-authoring)
+
+`P01`–`P34` are frozen drafting positions, not card identities. They will be
+replaced by stable `card-id` values after the fronts are authored. A bridge and
+retrieval may share a front only when the bridge uses inbound or already
+established language and makes one bounded successful inference possible.
+
+Allowed inbound knowledge is limited to: number and arithmetic operations;
+subtraction and inverse-operation checks; fractions and decimals; measurement,
+units, conversion, precision, rounded intervals, and reasonableness; variables,
+expressions, equations as equality statements, substitution, evaluation, and
+translation between verbal and symbolic expressions. No geometry vocabulary,
+tool grammar, or diagram mark is inbound.
+
+| New concept, symbol, or representation | First explanation | First supported retrieval | Later application | Pre-authoring status |
+|---|---|---|---|---|
+| Point; dot and capital-letter convention | P01 bridge | P01 | P02 onward | ready |
+| Line; straightness; continuation in two directions; two arrowheads | P02 bridge | P02 | P05–P10 | ready |
+| Segment; two endpoints | P03 bridge | P03 | P05–P10, P19, P22, P30–P34 | ready |
+| Ray; endpoint and one direction; one arrowhead | P04 bridge | P04 | P05–P17, P31 | ready |
+| Mixed line/segment/ray diagram grammar | P02–P04 | P05 | P06–P07 | ready |
+| Segment notation `\overline{AB}` and line notation `\overleftrightarrow{AB}` | P06 bridge | P06 | P19, P22, P30–P34 | ready |
+| Ray notation `\overrightarrow{AB}` and order-dependent direction | P06 bridge | P07 | P11 onward | ready |
+| Plane; bounded patch as an unbounded flat-surface convention | P08 bridge | P08 | later spatial diagrams | ready |
+| Collinear | P09 bridge | P09 | P10, P30–P34 | ready |
+| Intersection as a shared point | P10 bridge | P10 | P30–P34 | ready |
+| Angle; two rays; common endpoint; sides; vertex | P11 bridge | P11 | P12–P18, P20, P24–P25 | ready |
+| Three-letter angle notation with vertex in the middle | P12 bridge | P12 | P13 onward | ready |
+| Angle object `\angle ABC` versus measure `m\angle ABC` | P13 bridge | P13 | P14–P25 | ready |
+| Degree and degree symbol; one degree as 1/360 of a full turn | P14 bridge | P14 | P15–P20 | ready |
+| Right and straight angle classifications | P15 bridge | P15 | P17–P18, P25 | ready |
+| Acute and obtuse angle classifications | P16 bridge | P16 | P17–P18 | ready |
+| Angle-class visual translation | P15–P16 | P17 | later angle reasoning | ready |
+| Protractor; center, baseline, zero choice, dual scale | P18 bridge | P18 | P20, P29 | ready |
+| Reading angle measure from a protractor | P18 | P20 problem | later angle measurement | ready |
+| Segment length as difference of endpoint ruler readings | inbound subtraction plus P19 setup | P19 problem | P22, P30–P34 | ready |
+| Measured approximation versus exact stated value | inbound precision plus P22 bridge | P22 | P26, problem checks | ready |
+| Matching segment tick marks state equal lengths | P23 bridge | P23 | P26, P30–P34 | ready |
+| Matching angle arcs state equal angle measures | P24 bridge | P24 | P26 and chapter 2 | ready |
+| Square-corner mark states a 90-degree angle | P25 bridge | P25 | P26 and chapter 2 | ready |
+| Not-to-scale diagram; explicit labels and marks override appearance | P26 bridge | P26 | every later chapter | ready |
+| Ruler versus unmarked straightedge | P27 bridge | P27 | P29–P34 | ready |
+| Compass as fixed-distance transfer tool | P28 bridge | P28 | P30–P34 | ready |
+| Tool-choice discrimination among ruler, straightedge, compass, protractor | P27–P28 and P18 | P29 | P30–P34 | ready |
+| Construction as steps producing an exact relationship rather than a measured estimate | P30 bridge | P30 | P31–P34 | ready |
+| Copying a segment with unchanged compass opening | P30 analyzed example | P31 problem | later constructions | ready |
+| Midpoint as a point on a segment with two equal subsegment lengths | P32 bridge | P32 | P33–P34 | ready |
+| Equal-distance compass marks from both endpoints | P33 analyzed example | P33 | P34 | ready |
+| Compass-and-straightedge midpoint construction | P33 analyzed example | P34 problem | later bisector constructions | ready |
+
+Future-facing examples rejected before drafting: slopes and coordinate grids;
+parallel or perpendicular terminology; transformations and congruence;
+triangles, polygons, and circles as named objects; area and volume; square
+roots and trigonometric ratios; formal proof vocabulary. A curved compass mark
+will be described operationally rather than named with chapter-7 circle or arc
+terminology.
+
 ## Initial-learning path
 
 Every new bundle begins with a scheduled, diagram-supported orientation using

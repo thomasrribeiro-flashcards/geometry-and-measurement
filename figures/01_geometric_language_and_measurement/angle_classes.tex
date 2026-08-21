@@ -1,0 +1,28 @@
+\documentclass[tikz,border=7pt]{standalone}
+% flashcards-title: Four measured angles
+% flashcards-desc: Panels I through IV show angles measuring 35 degrees, 90 degrees, 125 degrees, and 180 degrees.
+\input{figures/tikz-style.tex}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \foreach \x/\roman in {-4.5/I,-1.5/II,1.5/III,4.5/IV}{
+    \node[geom panel,minimum width=2.65cm,minimum height=3.1cm] at (\x,0) {};
+    \node[geom label] at (\x,1.15) {\roman};
+  }
+  \draw[geom ray] (-5.25,-0.75)--(-3.85,-0.75);
+  \draw[geom ray] (-5.25,-0.75)--(-4.05,0.1);
+  \node[geom small] at (-4.55,-0.38) {$35^\circ$};
+
+  \draw[geom ray] (-2.15,-0.75)--(-0.75,-0.75);
+  \draw[geom ray] (-2.15,-0.75)--(-2.15,0.65);
+  \draw[geom line] (-1.92,-0.75)--(-1.92,-0.52)--(-2.15,-0.52);
+  \node[geom small] at (-1.35,-0.22) {$90^\circ$};
+
+  \draw[geom ray] (0.75,-0.75)--(2.15,-0.75);
+  \draw[geom ray] (0.75,-0.75)--(0.05,0.45);
+  \node[geom small] at (1.12,-0.05) {$125^\circ$};
+
+  \draw[geom both] (3.75,-0.75)--(5.25,-0.75);
+  \draw[geom construction] (4.05,-0.75) arc[start angle=180,end angle=0,radius=0.45];
+  \node[geom small] at (4.5,-0.05) {$180^\circ$};
+\end{tikzpicture}
+\end{document}

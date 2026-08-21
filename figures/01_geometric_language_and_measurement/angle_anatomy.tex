@@ -1,0 +1,17 @@
+\documentclass[tikz,border=7pt]{standalone}
+% flashcards-title: Two rays with a common endpoint
+% flashcards-desc: Rays from B pass through A and C, and a small curved mark shows the angle between them without naming it.
+\input{figures/tikz-style.tex}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \coordinate (B) at (-1.8,-1.2);
+  \coordinate (A) at (2.6,-1.2);
+  \coordinate (C) at (1.45,1.65);
+  \draw[geom ray] (B)--(A);
+  \draw[geom ray] (B)--(C);
+  \node[geom point,label={[geom small]below left:$B$}] at (B) {};
+  \node[geom point,label={[geom small]below:$A$}] at (1.35,-1.2) {};
+  \node[geom point,label={[geom small]above left:$C$}] at (0.55,0.9) {};
+  \draw[geom construction] ($(B)+(0:0.85)$) arc[start angle=0,end angle=41,radius=0.85];
+\end{tikzpicture}
+\end{document}

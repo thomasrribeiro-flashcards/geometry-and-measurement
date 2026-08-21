@@ -1,0 +1,25 @@
+\documentclass[tikz,border=7pt]{standalone}
+% flashcards-title: Angle on a dual-scale protractor
+% flashcards-desc: One ray follows the right-hand baseline at zero degrees and a second ray crosses the paired 60 and 120 degree marks.
+\input{figures/tikz-style.tex}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \coordinate (O) at (0,0);
+  \draw[geom line] (-3.4,0)--(3.4,0);
+  \draw[geom construction] (3.2,0) arc[start angle=0,end angle=180,radius=3.2];
+  \foreach \a in {0,10,...,180}{
+    \draw[geom line,line width=0.65pt] (\a:2.96)--(\a:3.2);
+  }
+  \foreach \a/\v in {0/0,30/30,60/60,90/90,120/120,150/150,180/180}{
+    \node[geom tiny] at (\a:2.65) {\v};
+  }
+  \foreach \a/\v in {0/180,30/150,60/120,90/90,120/60,150/30,180/0}{
+    \node[geom tiny,text=geomGray] at (\a:2.25) {\v};
+  }
+  \draw[geom ray] (O)--(3.35,0);
+  \draw[geom ray,draw=geomBlue] (O)--(60:3.35);
+  \node[geom point,label={[geom small]below:$O$}] at (O) {};
+  \draw[geom construction] (0.8,0) arc[start angle=0,end angle=60,radius=0.8];
+  \node[geom tiny] at (0,-0.48) {baseline begins at $0^\circ$ on the right};
+\end{tikzpicture}
+\end{document}
