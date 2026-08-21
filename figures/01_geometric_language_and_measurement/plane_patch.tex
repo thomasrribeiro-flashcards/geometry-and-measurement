@@ -1,0 +1,16 @@
+\documentclass[tikz,border=7pt]{standalone}
+% flashcards-title: Conventional drawing of a plane
+% flashcards-desc: Three labeled points lie on a slanted shaded patch whose drawn boundary is identified as only a picture boundary.
+\input{figures/tikz-style.tex}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \fill[geomPale] (-3,-1.7)--(2.5,-1.7)--(3.4,1.7)--(-2.1,1.7)--cycle;
+  \draw[geom line] (-3,-1.7)--(2.5,-1.7)--(3.4,1.7)--(-2.1,1.7)--cycle;
+  \foreach \p/\name/\pos in {(-1.5,-0.7)/A/below,(0.2,0.7)/B/above,(1.7,-0.35)/C/below}{
+    \node[geom point,label={[geom small]\pos:$\name$}] at \p {};
+  }
+  \draw[geom guide] (-3.45,-1.98)--(2.95,-1.98);
+  \draw[geom guide] (-2.55,1.98)--(3.85,1.98);
+  \node[geom small,align=center] at (0,-2.45) {the drawn edge is only a picture boundary};
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,25 @@
+\documentclass[tikz,border=7pt]{standalone}
+% flashcards-title: Compass-and-straightedge midpoint construction
+% flashcards-desc: Equal-distance compass marks from endpoints A and B meet above and below the segment; the line through those meetings crosses the segment at M.
+\input{figures/tikz-style.tex}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \coordinate (A) at (-2.4,0);
+  \coordinate (B) at (2.4,0);
+  \coordinate (X) at (0,2.25);
+  \coordinate (Y) at (0,-2.25);
+  \draw[geom construction] (A) ++(-48:3.28) arc[start angle=-48,end angle=48,radius=3.28];
+  \draw[geom construction] (A) ++(-48:3.28) arc[start angle=-48,end angle=-12,radius=3.28];
+  \draw[geom construction] (A) ++(12:3.28) arc[start angle=12,end angle=48,radius=3.28];
+  \draw[geom construction,dashed] (B) ++(132:3.28) arc[start angle=132,end angle=228,radius=3.28];
+  \draw[geom line] (A)--(B);
+  \draw[geom guide] (X)--(Y);
+  \node[geom point,label={[geom small]below left:$A$}] at (A) {};
+  \node[geom point,label={[geom small]below right:$B$}] at (B) {};
+  \node[geom open point,label={[geom small]above:$X$}] at (X) {};
+  \node[geom open point,label={[geom small]below:$Y$}] at (Y) {};
+  \node[geom point,label={[geom small]below right:$M$}] at (0,0) {};
+  \draw[geom line,line width=1.2pt] (-1.35,0.2)--(-1.12,-0.2);
+  \draw[geom line,line width=1.2pt] (1.12,0.2)--(1.35,-0.2);
+\end{tikzpicture}
+\end{document}
