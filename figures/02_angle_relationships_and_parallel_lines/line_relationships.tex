@@ -1,0 +1,27 @@
+\documentclass[tikz,border=7pt]{standalone}
+% flashcards-title: Perpendicular, marked parallel, and unmarked line pairs
+% flashcards-desc: Panel I shows intersecting lines r and s with a square-corner mark. Panel II shows lines p and q with matching body marks. Panel III shows lines u and v without relationship marks.
+\input{figures/tikz-style.tex}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \foreach \x/\roman in {-4/I,0/II,4/III}{
+    \node[geom panel,minimum width=3.5cm,minimum height=3.5cm] at (\x,0) {};
+    \node[geom label] at (\x,1.3) {\roman};
+  }
+
+  \draw[geom both] (-5.25,-0.45)--(-2.75,-0.45) node[geom small,anchor=west] {$r$};
+  \draw[geom both] (-4,-1.30)--(-4,0.80) node[geom small,anchor=south] {$s$};
+  \draw[geom line] (-4,-0.18)--(-3.73,-0.18)--(-3.73,-0.45);
+
+  \draw[geom both] (-1.35,0.35)--(1.35,0.35) node[geom small,anchor=west] {$p$};
+  \draw[geom both] (-1.35,-0.75)--(1.35,-0.75) node[geom small,anchor=west] {$q$};
+  \foreach \y in {0.35,-0.75}{
+    \draw[geom construction] (-0.16,\y-0.13)--(0.02,\y)--(-0.16,\y+0.13);
+    \draw[geom construction] (0.06,\y-0.13)--(0.24,\y)--(0.06,\y+0.13);
+  }
+
+  \draw[geom both] (2.65,0.30)--(5.35,0.40) node[geom small,anchor=west] {$u$};
+  \draw[geom both] (2.65,-0.78)--(5.35,-0.68) node[geom small,anchor=west] {$v$};
+  \node[geom tiny] at (4,-1.18) {no relationship marks};
+\end{tikzpicture}
+\end{document}

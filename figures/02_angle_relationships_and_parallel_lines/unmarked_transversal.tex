@@ -1,0 +1,11 @@
+\documentclass[tikz,border=7pt]{standalone}
+% flashcards-title: A transversal crossing two unmarked lines
+% flashcards-desc: A diagonal line t crosses lines r and s at different points. Neither r nor s carries a parallel relationship mark.
+\input{figures/tikz-style.tex}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[geom both] (-3.1,1.02)--(3.1,1.28) node[geom small,anchor=west] {$r$};
+  \draw[geom both] (-3.1,-1.15)--(3.1,-1.15) node[geom small,anchor=west] {$s$};
+  \draw[geom both] (-1.65,-2.30)--(1.65,2.30) node[geom small,anchor=south west] {$t$};
+\end{tikzpicture}
+\end{document}

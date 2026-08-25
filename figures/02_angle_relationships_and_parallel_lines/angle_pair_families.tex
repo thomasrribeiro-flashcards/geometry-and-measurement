@@ -1,0 +1,38 @@
+\documentclass[tikz,border=7pt]{standalone}
+% flashcards-title: Three angle-pair arrangements
+% flashcards-desc: Panel I shows two angles sharing a vertex and one side. Panel II shows separate angles measuring 35 and 55 degrees. Panel III shows separate angles measuring 125 and 55 degrees.
+\input{figures/tikz-style.tex}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \foreach \x/\roman in {-3.6/I,0/II,3.6/III}{
+    \node[geom panel,minimum width=3.2cm,minimum height=3.25cm] at (\x,0) {};
+    \node[geom label] at (\x,1.2) {\roman};
+  }
+
+  \coordinate (O) at (-4.45,-0.72);
+  \draw[geom ray] (O)--++(1.75,0);
+  \draw[geom ray] (O)--++(1.45,0.95);
+  \draw[geom ray] (O)--++(0.45,1.55);
+  \node[geom small] at (-3.55,-0.40) {$1$};
+  \node[geom small] at (-4.00,0.10) {$2$};
+  \node[geom tiny,anchor=north] at (-3.6,-1.08) {one shared side};
+
+  \coordinate (A) at (-1.05,-0.62);
+  \draw[geom ray] (A)--++(1.05,0);
+  \draw[geom ray] (A)--++(0.86,0.60);
+  \node[geom small] at (-0.55,-1.08) {$35^\circ$};
+  \coordinate (B) at (0.15,-0.62);
+  \draw[geom ray] (B)--++(1.05,0);
+  \draw[geom ray] (B)--++(0.60,0.86);
+  \node[geom small] at (0.75,-1.08) {$55^\circ$};
+
+  \coordinate (C) at (2.55,-0.62);
+  \draw[geom ray] (C)--++(1.05,0);
+  \draw[geom ray] (C)--++(-0.60,0.86);
+  \node[geom small] at (2.40,-1.08) {$125^\circ$};
+  \coordinate (D) at (3.85,-0.62);
+  \draw[geom ray] (D)--++(1.05,0);
+  \draw[geom ray] (D)--++(0.60,0.86);
+  \node[geom small] at (4.45,-1.08) {$55^\circ$};
+\end{tikzpicture}
+\end{document}

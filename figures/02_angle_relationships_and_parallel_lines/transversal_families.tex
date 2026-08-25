@@ -1,0 +1,23 @@
+\documentclass[tikz,border=7pt]{standalone}
+% flashcards-title: Numbered angles made by a transversal across marked parallel lines
+% flashcards-desc: Marked parallel lines r and s are crossed by line t. At the upper intersection the regions are numbered 1 northwest, 2 northeast, 3 southeast, and 4 southwest. At the lower intersection they are numbered 5 northwest, 6 northeast, 7 southeast, and 8 southwest.
+\input{figures/tikz-style.tex}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[geom both] (-3.2,1.15)--(3.2,1.15) node[geom small,anchor=west] {$r$};
+  \draw[geom both] (-3.2,-1.15)--(3.2,-1.15) node[geom small,anchor=west] {$s$};
+  \draw[geom both] (-1.65,-2.35)--(1.65,2.35) node[geom small,anchor=south west] {$t$};
+  \foreach \y in {1.15,-1.15}{
+    \draw[geom construction] (-2.15,\y-0.13)--(-1.97,\y)--(-2.15,\y+0.13);
+    \draw[geom construction] (-1.93,\y-0.13)--(-1.75,\y)--(-1.93,\y+0.13);
+  }
+  \node[geom small] at (-0.52,1.62) {$1$};
+  \node[geom small] at (0.55,1.62) {$2$};
+  \node[geom small] at (0.74,0.68) {$3$};
+  \node[geom small] at (-0.75,0.68) {$4$};
+  \node[geom small] at (-0.74,-0.68) {$5$};
+  \node[geom small] at (0.75,-0.68) {$6$};
+  \node[geom small] at (0.74,-1.62) {$7$};
+  \node[geom small] at (-0.75,-1.62) {$8$};
+\end{tikzpicture}
+\end{document}
