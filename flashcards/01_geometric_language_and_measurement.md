@@ -1,10 +1,14 @@
 +++
 order = 1
 subject = "mathematics"
+authoring_provider = "openai"
 authoring_model = "gpt-5.6-sol"
 authoring_reasoning_effort = "high"
+authoring_run_id = "request-15"
+curriculum_provider = "openai"
 curriculum_model = "gpt-5.6-sol"
 curriculum_reasoning_effort = "high"
+curriculum_run_id = "request-10"
 tags = ["geometry", "measurement", "constructions"]
 prerequisites = []
 provides = [
