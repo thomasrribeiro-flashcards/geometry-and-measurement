@@ -1,0 +1,16 @@
+\documentclass[tikz,border=7pt]{standalone}
+% flashcards-title: Four angles at one line intersection
+% flashcards-desc: Two lines intersect at O. The four angle regions around O are numbered 1 through 4.
+\input{figures/tikz-style.tex}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[geom both] (-3.0,0)--(3.0,0);
+  \draw[geom both] (-2.3,-1.85)--(2.3,1.85);
+  \node[geom point] at (0,0) {};
+  \node[geom label] at (0.24,-0.28) {$O$};
+  \node[geom small] at (-0.45,0.62) {$1$};
+  \node[geom small] at (0.60,0.48) {$2$};
+  \node[geom small] at (0.45,-0.62) {$3$};
+  \node[geom small] at (-0.62,-0.66) {$4$};
+\end{tikzpicture}
+\end{document}

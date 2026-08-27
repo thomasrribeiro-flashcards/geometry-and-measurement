@@ -58,7 +58,7 @@ procedures and replace the planned locations with actual stable card IDs.
 | New concept bundle | Allowed inbound source | Planned first explanation and supported retrieval | Later application | Status |
 |---|---|---|---|---|
 | Point, line, plane, ray, segment, distance, angle, degree, congruence marks, construction marks | Resolved arithmetic/measurement closure | Ch. 1 diagram-reading and tool-use micro-sequences | Every later chapter | planned |
-| Angle pairs, perpendicular/parallel lines, transversal relationships, reason/conclusion language | Ch. 1 | Ch. 2 relationship diagrams followed by one-step justifications | Chs. 4, 7, 9 | planned |
+| Angle pairs, perpendicular/parallel lines, transversal relationships, reason/conclusion language | Ch. 1 | Ch. 2 relationship diagrams followed by one-step justifications | Chs. 4, 7, 9 | detailed below |
 | Translation, reflection, rotation, invariant, symmetry, composition | Ch. 1 plus signed coordinates inbound | Ch. 3 physical/coordinate before-and-after transformations | Chs. 4, 5, 9 | planned |
 | Triangle classes, corresponding parts, congruence, SSS/SAS/ASA/AAS/HL, insufficient data | Chs. 2–3 | Ch. 4 rigid-motion bridge, supported criterion choice, then deductions | Chs. 5, 6, 9 | planned |
 | Dilation, center/scale factor, similarity, AA, corresponding proportion, scale drawing | Ch. 4 plus inbound ratio/proportion | Ch. 5 dilation sequences and matched-side tables | Chs. 6, 8, 10 | planned |
@@ -199,6 +199,103 @@ roots and trigonometric ratios; formal proof vocabulary. A curved compass mark
 will be described operationally rather than named with chapter-7 circle or arc
 terminology.
 
+### Chapter 2 detailed design ledger
+
+This ledger freezes the chapter-2 design before card authoring. The allowed
+frontier is the resolved arithmetic/algebra capability summary plus all 34
+scheduled cards in chapter 1. In particular, the learner knows line, ray,
+segment, angle, vertex, angle measure in degrees, right and straight angles,
+angle/segment diagram marks, exact-versus-measured evidence, and construction
+language. General equation solving, equality properties, slope, coordinates,
+transformations, triangles, congruence terminology, and formal proof syntax are
+not inbound.
+
+| Retrieval sequence | Target and card form | Supported-to-independent progression | Authentic representation or figure decision |
+|---|---|---|---|
+| P01–P08 | Recognize adjacent, complementary, supplementary, opposite-ray, linear-pair, and vertical-angle relationships; explain why vertical angles have equal measures (`Q/A`). | Self-bridged relationship → supported identification → adjacent-versus-complementary discrimination → linear-pair inference → analyzed vertical-angle reason. | **Include `angle_pair_families` and `intersecting_lines`:** shared sides, opposite rays, and opposite angle regions are spatial evidence. **Omit a term table:** prose and KaTeX are more accessible and do not test a visual decision. |
+| P09 | Determine an unknown measure at one intersection and justify it (`P/S`). | Completion problem using one linear-pair relation and a genuine straight-angle check. | Reuse **`intersecting_lines`** with a stated measure; no answer labels appear in the asset. |
+| P10–P15 | Interpret perpendicular and parallel definitions, symbols, lowercase line labels, and body marks; distinguish stated marks from appearance (`Q/A`). | Definition and notation bridge → consequence of one right angle → definition and marking bridge → marked/unmarked discrimination. | **Include `line_relationships`:** perpendicular square marks, parallel body marks, and visually similar unmarked lines must be read. **Omit construction cards:** exact perpendicular/parallel construction needs sustained drawing practice and adds no new relationship decision here. |
+| P16–P24 | Interpret a transversal, numbered angle regions, interior/exterior position, and corresponding, alternate-interior, alternate-exterior, and same-side-interior pairs; apply the parallel-line angle results (`Q/A`). | Diagram-grammar bridge → region retrieval → one family at a time → theorem use with the parallel condition stated → condition diagnosis. | **Include `transversal_families`:** two intersections and marked angle regions are the authentic representation. Reuse one stable numbering only for initial learning; the problems vary the givens and requested relations. |
+| P25–P27 | Find a corresponding measure, complete a two-reason angle chain, and reject a parallel-line inference when no parallel evidence is present (`P/S`, `P/S`, `Q/A`). | One-step completion → faded two-step chain → misconception diagnosis. | Reuse **`transversal_families`** and include **`unmarked_transversal`** for the missing-hypothesis contrast. |
+| P28–P30 | Use a valid angle relationship in reverse to establish parallel lines; give a short reason-conclusion chain, including the case of two lines perpendicular to one line (`P/S`, `Q/A`, `P/S`). | Supported converse decision → name the required evidence → independent mixed argument. | **Include `perpendiculars_to_transversal`:** two square marks provide non-color evidence for the final short argument. **Omit formal two-column proof flow:** general proof syntax belongs to the later proof deck; the complete reason chain remains in prose. |
+
+Planned inventory: **25 `Q/A`, 0 cloze, 5 `P/S`, 6 figures**. The five
+problems progress from an intersecting-line completion, through one-step and
+two-step parallel-transversal calculations, to a converse classification and
+an independent short geometric argument. Every problem retains the complete
+ordered IDENTIFY → PLAN → EXECUTE → EVALUATE sequence. No cloze is planned
+because the new vocabulary first needs spatial discrimination and bounded
+reasoning rather than context-light exact insertion.
+
+Plausible opportunities intentionally omitted: photographs of roads or rails,
+which are decorative and may falsely suggest that appearance proves
+parallelism; protractor remeasurement, already established in chapter 1;
+perpendicular and parallel construction sequences, better practiced by drawing;
+coordinate grids and slope criteria, reserved for chapter 9; triangle examples,
+reserved for chapter 4; transformation explanations, reserved for chapter 3;
+and formal proof layouts, reserved for `mathematical-reasoning-and-proof`.
+
+### Chapter 2 concept-dependency ledger (pre-authoring)
+
+`P01`–`P30` are frozen drafting positions, not card identities. A bridge and
+retrieval share a front only when the bridge uses inbound or earlier-established
+language and supports one bounded decision.
+
+| New concept, symbol, or representation | First explanation | First supported retrieval | Later application | Pre-authoring status |
+|---|---|---|---|---|
+| Adjacent angles; shared vertex and side; nonoverlapping angle regions | P01 bridge and figure | P01 | P04–P09 | ready |
+| Complementary angles; measures total \(90^\circ\); adjacency not required | P02 bridge | P02 | P04, P11 | ready |
+| Supplementary angles; measures total \(180^\circ\); adjacency not required | P03 bridge | P03 | P04–P09, P24–P27 | ready |
+| Relationship-versus-position discrimination | P01–P03 | P04 | P05 onward | ready |
+| Opposite rays as rays sharing an endpoint and continuing in opposite directions on one line | P05 bridge | P05 | P06–P09 | ready |
+| Linear pair as adjacent angles with opposite nonshared sides | P05 | P06 | P07–P09, P24–P27 | ready |
+| Vertical angles as opposite angle regions made by intersecting lines | P07 bridge and figure | P07 | P08–P09, P24–P27 | ready |
+| Vertical-angle equality and its shared-straight-angle reason | P08 analyzed argument | P08 | P09, P24–P27 | ready |
+| Perpendicular lines and \(\perp\) | P10 bridge | P10 | P11, P29–P30 | ready |
+| One right-angle intersection forces four right angles | P11 bridge using P07–P08 and supplementary angles | P11 | P30 | ready |
+| Lowercase line labels | P10 bridge | P10 | P12 onward | ready |
+| Parallel lines in one plane; \(\parallel\) | P12 bridge | P12 | P13–P30 | ready |
+| Matching parallel body marks versus continuation arrowheads | P12 bridge and figure | P12 | P13–P30 | ready |
+| Appearance is not parallel-line evidence | inbound diagram-evidence convention plus P13 | P14 | P27 | ready |
+| Parallel-versus-perpendicular discrimination | P10–P14 | P15 | P16 onward | ready |
+| Transversal as a line intersecting two lines at different points | P16 bridge and figure | P16 | P17–P30 | ready |
+| Numeral inside an angle region as its short name | P01 bridge | P01 | P06–P28 | ready |
+| Interior and exterior regions for two lines cut by a transversal | P17 bridge | P17 | P18–P28 | ready |
+| Corresponding angles as matching corners at the two intersections | P18 bridge | P18 | P22, P25, P28–P30 | ready |
+| Alternate interior angles | P19 bridge | P19 | P22–P28 | ready |
+| Alternate exterior angles | P20 bridge | P20 | P22–P28 | ready |
+| Same-side interior angles | P21 bridge | P21 | P23–P28 | ready |
+| Parallel-transversal equal-measure results for corresponding and alternate pairs | P22 bridge with explicit parallel condition | P22 | P24–P26 | ready |
+| Parallel-transversal supplementary result for same-side interior pairs | P23 bridge with explicit parallel condition | P23 | P24–P27 | ready |
+| Parallel evidence as a required hypothesis | P12–P14 plus P22–P23 | P24 | P25–P27 | ready |
+| Short reason-conclusion chain | P08 analyzed reason and P25–P26 worked problems, then P29 explicit bridge | P29 | P30 | ready |
+| Reverse angle test for parallel lines | P28 problem bridge using corresponding-angle equality | P28 | P29–P30 | ready |
+| Two lines perpendicular to one line are parallel, via equal corresponding right angles | P29 bridge | P29 | P30 | ready |
+
+First-use exclusions: the chapter will not use *congruent* for equal angle
+measure, *slope*, coordinate notation, transformation language, triangle or
+polygon names, circle/arc/sector terminology, or formal proof vocabulary.
+Every transversal result states or visibly marks the parallel hypothesis; an
+unmarked look-alike is reserved for diagnosing the missing premise.
+
+### Chapter 2 inventory reconciliation
+
+The authored inventory matches the frozen design: **25 Q/A, 0 cloze,
+5 P/S, and 6 TikZ/SVG figures**. The problems progress from one-intersection
+completion to one-step and two-step transversal calculations, then a reverse
+parallel test and an independent perpendicular-to-parallel argument. The six
+figures retain distinct retrieval roles: angle-pair arrangement, one
+intersection, line relationship marks, transversal families, a missing-mark
+contrast, and two perpendicular relationships to one transversal. No planned
+card form, problem stage, or figure role was omitted.
+
+The intentionally omitted opportunities remain decorative road/rail
+photographs, repeated instrument measurement, exact construction sequences,
+coordinate/slope representations, triangle or transformation examples, and
+formal proof layouts. The completed front-by-front dependency and first-use
+scan is recorded in
+.flashcards/audits/02_angle_relationships_and_parallel_lines-cold-start.md.
+
 ## Initial-learning path
 
 Every new bundle begins with a scheduled, diagram-supported orientation using
@@ -210,11 +307,10 @@ or independent use. Tool grammars (protractor scales, congruence ticks,
 transformation arrows, coordinate grids, nets, cross-sections) are explained on
 a scheduled front before a card asks the learner to interpret them.
 
-Only chapter 1 may be authored as the pilot. Before any later chapter, replace
-the bundle-level ledger with card-level dependencies, run the front-by-front
-cold-start simulation, save `.flashcards/audits/pilot-cold-start.md`, and obtain
-explicit approval. A failed card must expose a retrieval or reasoning gap, not
-missing instruction.
+Chapter 1 is the approved pilot recorded in deck.toml. Before each later
+chapter, replace its bundle-level plan with card-level dependencies and run a
+chapter-boundary front-only cold-start simulation. A failed card must expose a
+retrieval or reasoning gap, not missing instruction.
 
 ## Figure policy
 
@@ -245,13 +341,14 @@ notation and construction conventions must be named when they affect grading.
 
 ## Validation gate
 
-For this curriculum-plan-only handoff:
+For a chapter-sized build handoff:
 
-1. Run `flashcards deck prerequisites .` and confirm every edge resolves and the
-   graph is acyclic.
-2. Run `flashcards deck validate .` and confirm unique orders/identities and
-   zero scheduled cards in every ordered chapter.
-3. Run `git diff --check` and review the complete diff for accidental content or
-   asset changes.
-4. Stop for human review. Card, solution, and figure authoring require a
-   separate pilot job.
+1. Run flashcards deck stabilize . --check.
+2. Run flashcards deck prerequisites . --chapter <number> and reconcile the
+   result with the staged machine-resolved closure in an isolated run.
+3. Run flashcards deck validate . and require zero parser, KaTeX, image,
+   identity, markup, cloze, and frontmatter findings.
+4. Run flashcards deck render-figures . --check, inspect every changed figure,
+   and confirm accessible titles/descriptions and tight centered canvases.
+5. Run git diff --check and review the complete diff for accidental content,
+   identity, prerequisite, or scope changes.

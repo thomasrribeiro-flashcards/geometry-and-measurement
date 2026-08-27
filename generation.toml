@@ -13,6 +13,25 @@ generation_mode = "generate"
 provenance_source = "website-request"
 
 [[runs]]
+run_id = "request-23"
+request_id = "23"
+operation = "chapter-content"
+artifacts = [".flashcards/audits/02_angle_relationships_and_parallel_lines-cold-start.md", "CARD_README.md", "README.md", "figures/02_angle_relationships_and_parallel_lines/angle_pair_families.svg", "figures/02_angle_relationships_and_parallel_lines/angle_pair_families.tex", "figures/02_angle_relationships_and_parallel_lines/intersecting_lines.svg", "figures/02_angle_relationships_and_parallel_lines/intersecting_lines.tex", "figures/02_angle_relationships_and_parallel_lines/line_relationships.svg", "figures/02_angle_relationships_and_parallel_lines/line_relationships.tex", "figures/02_angle_relationships_and_parallel_lines/perpendiculars_to_transversal.svg", "figures/02_angle_relationships_and_parallel_lines/perpendiculars_to_transversal.tex", "figures/02_angle_relationships_and_parallel_lines/transversal_families.svg", "figures/02_angle_relationships_and_parallel_lines/transversal_families.tex", "figures/02_angle_relationships_and_parallel_lines/unmarked_transversal.svg", "figures/02_angle_relationships_and_parallel_lines/unmarked_transversal.tex", "flashcards/02_angle_relationships_and_parallel_lines.md"]
+provider_id = "openai"
+model_id = "gpt-5.6-sol"
+reasoning_effort = "high"
+generated_at = "2026-08-24T17:19:12-07:00"
+generation_mode = "generate"
+chapter_id = "02_angle_relationships_and_parallel_lines"
+workflow_version = "chapter-content-v1"
+workflow_commit = "9422ffdf4786baa86edc7ebdecf181d002a2b7e4"
+registry_base_commit = "4ea6ec675dd0a6411e2687e1bf51a4a112397c3d"
+catalog_hash = "sha256:591e04cb19fdb28abb7c740c162d5f814f77ad67e8d41acc1c970fd70f107558"
+context_hash = "sha256:30352b5e860633c0693c83bc04d1c21be2948a45316493915d92d790dde7e902"
+base_commit = "4d34ea42ad8da720929831e87973424f76fde2c0"
+provenance_source = "website-request"
+
+[[runs]]
 run_id = "request-15"
 request_id = "15"
 operation = "chapter-content"

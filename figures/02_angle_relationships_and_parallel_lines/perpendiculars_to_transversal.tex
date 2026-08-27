@@ -1,0 +1,14 @@
+\documentclass[tikz,border=7pt]{standalone}
+% flashcards-title: Two lines perpendicular to the same crossing line
+% flashcards-desc: Line t crosses lines r and s. A square-corner mark appears in the same relative corner at each intersection, stating that r and s are each perpendicular to t.
+\input{figures/tikz-style.tex}
+\begin{document}
+\begin{tikzpicture}[x=1cm,y=1cm]
+  \draw[geom both] (-3.0,1.15)--(3.0,1.15) node[geom small,anchor=west] {$r$};
+  \draw[geom both] (-3.0,-1.15)--(3.0,-1.15) node[geom small,anchor=west] {$s$};
+  \draw[geom both] (0,-2.35)--(0,2.35) node[geom small,anchor=south] {$t$};
+  \foreach \y in {1.15,-1.15}{
+    \draw[geom line] (0,\y)--(0.28,\y)--(0.28,\y+0.28)--(0,\y+0.28);
+  }
+\end{tikzpicture}
+\end{document}
